@@ -24,7 +24,6 @@ export const registerController = async (req, res) => {
     res.status(201).send({
       success: true,
       message: "User registered successfully",
-      user,
     });
   } catch (error) {
     console.error(error);
@@ -66,13 +65,6 @@ export const loginController = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "Login successful",
-      user: {
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        address: user.address,
-      },
       token,
     });
   } catch (error) {
