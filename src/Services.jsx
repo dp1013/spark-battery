@@ -241,16 +241,7 @@ const ProductListPage = ({ onAddToCart }) => {
   return (
     <ProductPageContainer>
       <Header>
-        <SearchInput 
-          type="text" 
-          placeholder="Search..." 
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <SearchButton onClick={handleSearch}>🔍</SearchButton>
-        <ToggleMenuButton onClick={() => setShowMenu(true)}>
-          Filter
-        </ToggleMenuButton>
+      
       </Header>
       <PopUpMenu show={showMenu}>
         <CloseButton onClick={() => setShowMenu(false)}>Close</CloseButton>
